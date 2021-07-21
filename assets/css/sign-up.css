@@ -1,0 +1,7 @@
+.btn-send-code {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    cursor: pointer;
+    color: var(--theme-color);
+}

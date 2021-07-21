@@ -1,0 +1,181 @@
+/* .content {
+    margin: 0 auto;
+    width: 479px;
+    max-width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, #E55D87, #5FC3E4);
+} */
+.navbar{
+    color:white;
+    position: fixed;
+    top: 0px;
+    display:flex;
+    flex: 1;
+    justify-content: space-between;
+    width: 720px;
+    max-width: calc(100%);
+    flex-grow: 1;
+    padding: 10px;
+    align-items: center;
+    background-color: #5a5555;
+    z-index: 99999;
+}
+.navbar img {
+    width: 40px;
+}
+.navbar span {
+    display: inline-block;
+    max-width: 140px;
+    font-size: 1.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 5px;
+    line-height: 1.7 rem;
+}
+
+.user-icon {
+    font-size: 2rem;
+}
+
+.container-view {
+    position: relative;
+    min-height: calc(100vh - 40px);
+    padding-top: 60px;
+}
+h3 {
+    font-size: 160%;
+}
+h4 {
+    font-size: 130%;
+    color: #3d3d3d
+}
+.header__infor {
+    /* position: absolute; */
+    /* width: 100vw; */
+    top: 0px;
+    left: 0px;
+    /* transition: 0.3s ease; */
+}
+
+.information {
+    background-color: white;
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 60px;
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 0px 2px 5px 1px #888888;
+    transition: 0.3s ease;
+}
+.infor__avatar {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 20px;
+    float: left;
+    position: relative;
+    top: -20px;
+    left: -1px;
+    transition: 0.3s ease;
+}
+
+.infor__description{
+    margin-left: 10px;
+}
+
+
+.sticky  {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+.sticky .information {
+    margin-top: 0px;
+    width: 95%;
+}
+
+.sticky .infor__avatar {
+    top: 0px;
+    width: 70px;
+    height: 70px;
+}
+
+.sticky .infor__bio {
+    display: none;
+}
+
+
+.link-list {
+    flex: 1;
+    /* margin-top: 190px; */
+}
+.item {
+    border-radius: 20px;
+    padding: 10px;
+    margin: 0 auto;
+    background-color: white;
+    width: 95%;
+    display: flex;
+    align-items: center;
+}
+
+a + a {
+    margin-top: 10px;
+}
+
+.type-logo {
+    width: 50px;
+    margin-right: 20px;
+}
+
+footer {
+    /* position: absolute; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    width: 100vw;
+    background-color: white;
+    text-align: center;
+    line-height: 50px;
+}
+
+.follme-logo {
+    width: 30px;
+    margin-top: 5px;
+}
+
+footer h4 {
+    margin: 0;
+    line-height: 35px;
+}
+.link-infor {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    margin: 10px;
+}
+.link-infor span {
+    font-size: 1.4rem;
+}
+.link-infor__qr i {
+    font-size: 3.5rem;
+}
+.nav {
+    color: black;
+    font-size: 1.5rem;
+}
+
+.nav-link.active {
+    background-color: none;
+}
+.link-text {
+    color: rgb(77, 77, 235)
+}
+
+.link-infor__text i {
+    margin-left: 10px;
+    font-size: 1.5rem;
+}

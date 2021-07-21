@@ -1,0 +1,44 @@
+:root {
+    --theme-color: #ff6541;
+    --text-color: #333;
+    --background-color: #f1f1f1;
+}
+
+* {
+    box-sizing: inherit;
+}
+html {
+    color: var(--text-color);
+    font-size: 62.5%;
+    box-sizing: border-box;
+    font-family: 'Lato', 'Roboto', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0 auto;
+    /* background: linear-gradient(to bottom, #E55D87, #5FC3E4); */
+    background: var(--background-color);
+    font-size: 1.5rem;
+}
+
+.grid {
+    width: 720px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.grid__full-width {
+    width: 100%;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.login-foot {
+    margin-top: 20px;
+}
+a {
+    color: var(--theme-color)
+}
