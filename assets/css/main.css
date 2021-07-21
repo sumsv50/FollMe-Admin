@@ -26,7 +26,7 @@
 .navbar span {
     display: inline-block;
     max-width: 140px;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -35,7 +35,7 @@
 }
 
 .user-icon {
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .container-view {
@@ -158,9 +158,11 @@ footer h4 {
     margin: 10px;
 }
 .link-infor span {
+    color: var(--text-color);
     font-size: 1.4rem;
 }
 .link-infor__qr i {
+    color: var(--theme-color);
     font-size: 3.5rem;
 }
 .nav {
@@ -168,14 +170,29 @@ footer h4 {
     font-size: 1.5rem;
 }
 
-.nav-link.active {
-    background-color: none;
-}
-.link-text {
-    color: rgb(77, 77, 235)
+
+span.link-text {
+    color: rgb(92, 92, 238);
 }
 
 .link-infor__text i {
     margin-left: 10px;
-    font-size: 1.5rem;
+    font-size: 2.1rem;
+}
+
+.nav-link {
+    color: var(--text-color);
+    display: block;
+    padding: 0.8rem 1rem;
+}
+.nav-link.active {
+    background-color: var(--theme-color)!important;
+}
+
+.nav-pills::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: rgb(202, 202, 202);
 }
