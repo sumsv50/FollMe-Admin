@@ -210,16 +210,26 @@ span.link-text {
     object-fit: cover;
     border-radius: 20px;
 }
-
-.button__upload-avatar {
+.button {
     font-weight: 500;
     color: white;
     font-size: 1.5rem;
     border-radius: 5px;
     margin: 0 auto;
+    margin-bottom: 30px;
     display: inline-block;
-    padding: 10px 40px;
+    padding: 10px 30px;
+}
+
+.button__upload-avatar {
     background-color: var(--foreign-color);
+}
+.button__save-infor {
+    margin-top: 10px;
+    background-color: var(--theme-color);
+}
+.button__save-infor i {
+    margin-right: 10px;
 }
 
 #image-demo {
@@ -242,6 +252,26 @@ span.link-text {
 .modal button {
     border: none;
     background-color: var(--theme-color);
-    padding: 0.375rem 1.75rem;
+    padding: 0.4rem 1.75rem;
     font-size: 1.4rem;
+}
+.container-infor {
+    font-size: 1.5rem;
+    text-align: left;
+    width: 77%;
+    margin: 0 auto;
+}
+
+
+.form-control {
+    font-size: 1.5rem;
+}
+input.form-control {
+    height: 40px;
+}
+textarea.form-control {
+    line-height: 30px;
+}
+.container-infor label {
+    font-weight: 500;
 }

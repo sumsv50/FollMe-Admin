@@ -57,8 +57,23 @@
 
                 <img class="config__avatar" src="assets/img/3 (2).jpg">
                 <input id="inp-avatar" type="file" name="avatar"  accept="image/*" hidden="hidden">
-                <div type="button" class="button__upload-avatar" onclick=" document.getElementById('inp-avatar').click();">
+                <div type="button" class="button button__upload-avatar" onclick=" document.getElementById('inp-avatar').click();">
                     Đăng ảnh
+                </div>
+                <div class="container-infor">
+                    <div class="mb-4">
+                        <label for="name" class="form-label">Tên: </label>
+                        <br>
+                        <input name="name" type="text" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="bio" class="form-label">Thông tin: </label>
+                        <br>
+                        <textarea name="bio" class="form-control"  rows="2"></textarea>
+                    </div>
+                </div>
+                <div type="button" class="button button__save-infor" onclick=" document.getElementById('inp-avatar').click();">
+                    <i class="far fa-save"></i>Lưu thông tin
                 </div>
             </div>
             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
@@ -154,7 +169,7 @@
                 </div>
                 <div class="modal-footer">
                     <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button> -->
-                    <button type="button" class="btn btn-primary">Xong</button>
+                    <button type="button" class="btn btn-primary btn-crop" >Xong</button>
                 </div>
             </div>
         </div>
@@ -168,6 +183,7 @@
     <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/js/me.js"></script>
     <script>
+        const preview = document.querySelector('.config__avatar');
         $(document).ready(function () {
             $image_crop = $('#image-demo').croppie({
                 enableExif: true,
@@ -190,17 +206,25 @@
                 $image_crop.croppie('bind', {
                     url: event.target.result,
                 }).then(function () {
-                    $('#image-demo').croppie('setZoom', 0);
-                    console.log("oke");
+                    $image_crop.croppie('setZoom', 0);
                 })
             }
             reader.readAsDataURL(this.files[0]);
             $('#upload-avt-modal').modal('show');
         })
 
+        $('.btn-crop').click(function() {
+            $image_crop.croppie('result', {
+                size: {width: 250, height: 250},
+                type: 'canvas',
+            }).then(function(response){
+                preview.src = response;
+                // console.log(response);
+            })
+            $('#upload-avt-modal').modal('hide');
+        })
 
     </script>
-
 
 </body>
 
