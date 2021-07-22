@@ -15,7 +15,7 @@
     width: 720px;
     max-width: calc(100%);
     flex-grow: 1;
-    padding: 10px;
+    padding: 5px 10px;
     align-items: center;
     background-color: #5a5555;
     z-index: 99999;
@@ -172,7 +172,7 @@ footer h4 {
 
 
 span.link-text {
-    color: rgb(92, 92, 238);
+    color: rgb(126, 126, 126);
 }
 
 .link-infor__text i {
@@ -195,4 +195,53 @@ span.link-text {
     width: 100%;
     height: 1px;
     background-color: rgb(202, 202, 202);
+}
+
+/*  */
+#pills-home{
+    text-align: center;
+}
+
+.config__avatar {
+    display: block;
+    margin: 50px auto 20px auto; 
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.button__upload-avatar {
+    font-weight: 500;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: inline-block;
+    padding: 10px 40px;
+    background-color: var(--foreign-color);
+}
+
+#image-demo {
+    margin-top: 30px;
+}
+
+.avatar-modal {
+    width: 80%;
+    margin: 0 auto;
+    min-height: 100px;
+    position: fixed;
+    top: 50px;
+    background-color: aliceblue;
+}
+
+.modal h5 {
+    font-size: 1.5rem;
+}
+
+.modal button {
+    border: none;
+    background-color: var(--theme-color);
+    padding: 0.375rem 1.75rem;
+    font-size: 1.4rem;
 }
