@@ -41,7 +41,7 @@
 .container-view {
     position: relative;
     min-height: calc(100vh - 40px);
-    padding-top: 60px;
+    padding-top: 50px;
 }
 h3 {
     font-size: 160%;
@@ -246,14 +246,15 @@ span.link-text {
 }
 
 .modal h5 {
+    font-size: 1.6rem;
+}
+.modal .btn {
+    border: none;
+    padding: 0.4rem 1.75rem;
     font-size: 1.5rem;
 }
-
-.modal button {
-    border: none;
+.btn-confirm {
     background-color: var(--theme-color);
-    padding: 0.4rem 1.75rem;
-    font-size: 1.4rem;
 }
 .container-infor {
     font-size: 1.5rem;
@@ -274,4 +275,41 @@ textarea.form-control {
 }
 .container-infor label {
     font-weight: 500;
+}
+
+/*  */
+.infor__name {
+    margin: 10px 0;
+}
+
+.link-list {
+    margin-top: 60px;
+}
+
+.create-link {
+    cursor: pointer;
+    font-size: 150%;
+    text-align: center;
+    margin: 30px auto 10px;
+    width: 140px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+.create-link i {
+    margin-right: 8px;
+}
+
+.create-link:hover {
+    background-color: black;
+    color: white;
+}
+.form-select {
+    font-size: 1.7rem;
+}
+
+.form-select option {
+    padding: 50px 0;
 }
