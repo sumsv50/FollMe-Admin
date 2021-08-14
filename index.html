@@ -89,58 +89,85 @@
                 </div>
                 <div class="create-link" data-bs-toggle="modal" data-bs-target="#create-link-modal"><i class="fas fa-plus"></i>Thêm link</div>
                 <div class="link-list">
-                    <a href="https://www.facebook.com/sumsv50/" target="_blank" rel="noopener noreferrer">
+                    <a>
                         <div class="item">
                             <img src="assets/img/sim.png" alt="logo" class="type-logo">
                             <h3 class="type-name">Số điện thoại</h3>
+                            <div class="sort-icon">
+                                <i class="fas fa-sort"></i>
+                            </div>
                         </div>
                     </a>
-                    <a href="">
+                    <a >
                         <div class="item">
                             <img src="assets/img/facebook.png" alt="logo" class="type-logo">
                             <h3 class="type-name">Facebook</h3>
+                            <div class="sort-icon">
+                                <i class="fas fa-sort"></i>
+                            </div>
                         </div>
                     </a>
-                    <a href="">
+                    <a >
                         <div class="item">
                             <img src="assets/img/instagram.png" alt="logo" class="type-logo">
                             <h3 class="type-name">Instagram</h3>
+                            <div class="sort-icon">
+                                <i class="fas fa-sort"></i>
+                            </div>
                         </div>
                     </a>
-                    <a href="">
+                    <a >
                         <div class="item">
                             <img src="assets/img/email.png" alt="logo" class="type-logo">
                             <h3 class="type-name">Email</h3>
+                            <div class="sort-icon">
+                                <i class="fas fa-sort"></i>
+                            </div>
                         </div>
                     </a>
-                    <a href="">
+                    <a >
                         <div class="item">
                             <img src="assets/img/zalo.png" alt="logo" class="type-logo">
                             <h3 class="type-name">Zalo</h3>
+                            <div class="sort-icon">
+                                <i class="fas fa-sort"></i>
+                            </div>
                         </div>
                     </a>
-                    <a href="">
+                    <a >
                         <div class="item">
                             <img src="assets/img/youtube.png" alt="logo" class="type-logo">
                             <h3 class="type-name">Youtube</h3>
+                            <div class="sort-icon">
+                                <i class="fas fa-sort"></i>
+                            </div>
                         </div>
                     </a>
-                    <a href="">
+                    <a >
                         <div class="item">
                             <img src="assets/img/tiktok.png" alt="logo" class="type-logo">
                             <h3 class="type-name">TikTok</h3>
+                            <div class="sort-icon">
+                                <i class="fas fa-sort"></i>
+                            </div>
                         </div>
                     </a>
-                    <a href="">
+                    <a >
                         <div class="item">
                             <img src="assets/img/website.png" alt="logo" class="type-logo">
                             <h3 class="type-name">Website</h3>
+                            <div class="sort-icon">
+                                <i class="fas fa-sort"></i>
+                            </div>
                         </div>
                     </a>
-                    <a href="">
+                    <a >
                         <div class="item">
                             <img src="assets/img/link.png" alt="logo" class="type-logo">
                             <h3 class="type-name">Link khác</h3>
+                            <div class="sort-icon">
+                                <i class="fas fa-sort"></i>
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -181,16 +208,16 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-                    <option selected>Open this select menu</option>
+                <select class="form-select form-select-sm drd-select-link" aria-label=".form-select-sm example">
+                    <option selected disabled>Open this select menu</option>
                     <option value="1">He lo</option>
                     <option value="2">Two</option>
                     <option value="3">Three</option>
                 </select>
             </div>
             <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Understood</button>
+            <!-- <button type="button" class=" btn-modal  btn-secondary" data-bs-dismiss="modal">Hủy</button> -->
+            <button type="button" class=" btn-modal  btn-primary">Thêm</button>
             </div>
         </div>
         </div>
@@ -203,6 +230,7 @@
     <!-- <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script type="text/javascript" src="assets/js/croppie.min.js"></script>
+    <script type="text/javascript" src="assets/js/sortable.min.js"></script>
     <script type="text/javascript" src="assets/js/me.js"></script>
     <script>
         const preview = document.querySelector('.config__avatar');
@@ -244,6 +272,18 @@
                 // console.log(response);
             })
             $('#upload-avt-modal').modal('hide');
+        })
+
+
+
+        const dragArea = document.querySelector('.link-list');
+        new Sortable(dragArea, {
+            animation: 250,
+            handle: '.sort-icon',
+            ghostClass: 'choosen-background-class',
+            onUpdate: (env) => {
+                console.log(env.oldIndex, env.newIndex)
+            }
         })
 
     </script>

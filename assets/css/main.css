@@ -5,6 +5,17 @@
     height: 100vh;
     background: linear-gradient(to bottom, #E55D87, #5FC3E4);
 } */
+
+/* REUSE COMPONENT */
+.modal-content {
+    border-radius: 10px;
+}
+.choosen-background-class div {
+    background-color: #cfcfcf;
+}
+
+
+
 .navbar{
     color:white;
     position: fixed;
@@ -119,6 +130,15 @@ h4 {
     width: 95%;
     display: flex;
     align-items: center;
+}
+
+.sort-icon {
+    position: absolute;
+    right: 6%;
+}
+.sort-icon i {
+    color:rgb(126, 126, 126);
+    font-size: 3rem;
 }
 
 a + a {
@@ -307,9 +327,21 @@ textarea.form-control {
     color: white;
 }
 .form-select {
+    height: 40px;
     font-size: 1.7rem;
 }
 
 .form-select option {
     padding: 50px 0;
+}
+
+.btn-modal {
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    padding: 7px 15px;
+}
+
+.btn-primary {
+    background-color: var(--theme-color);
 }
